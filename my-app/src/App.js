@@ -27,18 +27,18 @@ function App() {
       <CostItem 
         date={coasts[0].date}
         description={coasts[0].description} 
-        amount={coasts[0].amount}>
-      </CostItem>
+        amount={coasts[0].amount}
+      />
       <CostItem 
         date={coasts[1].date}
         description={coasts[1].description} 
-        amount={coasts[1].amount}>
-      </CostItem>
+        amount={coasts[1].amount} 
+      />
       <CostItem 
         date={coasts[2].date}
         description={coasts[2].description} 
-        amount={coasts[2].amount}>
-      </CostItem>
+        amount={coasts[2].amount} 
+      />
     </div>
   );
 }
