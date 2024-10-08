@@ -1,4 +1,5 @@
-import Costs from "./components/Costs";
+//import React from "react";
+import Costs from "./components/Costs/Costs";
 
 
 function App() {
@@ -20,6 +21,11 @@ function App() {
     },
 
   ];
+
+  /*return React.createElement(
+    'div', {},
+    React.createElement('h1', {}, 'Get Started'),
+    React.createElement(Costs, {costs: costs}));*/
 
   return (
     <div>
