@@ -1,8 +1,8 @@
-import CostItem from "./components/CostItem";
+import Costs from "./components/Costs";
 
 
 function App() {
-  const coasts = [
+  const costs = [
     {
       date: new Date(2024, 10, 7),
       description: "Холодильник",
@@ -24,21 +24,7 @@ function App() {
   return (
     <div>
       <h1>Get started</h1>
-      <CostItem 
-        date={coasts[0].date}
-        description={coasts[0].description} 
-        amount={coasts[0].amount}
-      />
-      <CostItem 
-        date={coasts[1].date}
-        description={coasts[1].description} 
-        amount={coasts[1].amount} 
-      />
-      <CostItem 
-        date={coasts[2].date}
-        description={coasts[2].description} 
-        amount={coasts[2].amount} 
-      />
+      <Costs costs={costs}/>
     </div>
   );
 }
