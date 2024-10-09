@@ -1,3 +1,4 @@
+import './CostsFilter.css'
 
 function CostsFilter(props){
     const yearChangeHandler = (event) =>{
@@ -5,8 +6,8 @@ function CostsFilter(props){
     };
 
     return(
-        <div>
-            <div>
+        <div className="costs-filter">
+            <div className="costs-filter__control">
                 <label>Выбор по году</label>
                 <select value={props.year} onChange={yearChangeHandler}>
                     <option value='2025'>2025</option>
