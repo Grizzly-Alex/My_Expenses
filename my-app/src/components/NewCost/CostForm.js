@@ -2,42 +2,79 @@ import React, { useState } from 'react';
 import './CostForm.css';
 
 function CostForm(){
-    /*
-    const [name, setName] = useState('');
-    const [amount, setAmount] = useState('');
-    const [date, setDate] = useState('');*/
+    
+    const [inputName, setInputName] = useState('');
+    const [inputAmount, setInputAmount] = useState('');
+    const [inputDate, setInputDate] = useState('');
 
-    const [userInput, setUserInput] = useState({
-        name: '',
-        amount: '',
-        date: '',
-    });
+    // const [userInput, setUserInput] = useState({
+    //     name: '',
+    //     amount: '',
+    //     date: '',
+    // });
 
     const nameChangeHandler = (event) => {
-        //setName({name: event.target.value});
-        setUserInput({
-            ...userInput,
-            name: event.target.value
-        });
+        setInputName(event.target.value);
+
+        // setUserInput({
+        //     ...userInput,
+        //     name: event.target.value
+        // });
+
+        // setUserInput((previousState) => {
+        //     return {
+        //         ...previousState,
+        //         name: event.target.value,
+        //     };
+        // });
     };
 
     const amountChangeHandler = (event) => {
-        //setAmount({name: event.target.value});
-        setUserInput({
-            ...userInput,
-            amount: event.target.value
-        });
+        setInputAmount(event.target.value);
+
+        // setUserInput({
+        //     ...userInput,
+        //     amount: event.target.value
+        // });
+
+        // setUserInput((previousState) => {
+        //     return {
+        //         ...previousState,
+        //         amount: event.target.value,
+        //     };
+        // });
     };
 
     const dateChangeHandler = (event) => {
-        //setDate({name: event.target.value});
-        setUserInput({
-            ...userInput,
-            date: event.target.value
-        });
+        setInputDate(event.target.value);
+
+        // setUserInput({
+        //     ...userInput,
+        //     date: event.target.value
+        // });
+
+        // setUserInput((previousState) => {
+        //     return {
+        //         ...previousState,
+        //         date: event.target.value,
+        //     };
+        // });
     };
 
-    return <form>
+    const submitHandler = (event) => {
+        event.preventDefault();
+
+        const costData = {
+            name: inputName,
+            amount: inputAmount,
+            date: new Date(inputDate),
+        }; 
+
+        console.log(costData);
+    };
+
+
+    return <form onSubmit={submitHandler}>
         <div className='new-cost__controls'>
             <div className='new-cost__control label'>
                 <label>Название</label>  
