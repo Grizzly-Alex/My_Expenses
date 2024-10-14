@@ -15,7 +15,7 @@ function CostList(props){
             description={cost.description}
             amount={cost.amount}/>)) }
         </ul>
-    )
+    );
 };
 
 export default CostList;

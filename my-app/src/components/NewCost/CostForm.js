@@ -92,10 +92,10 @@ function CostForm(props){
                 <label>Дата</label>  
                 <input type='date' min='2024-10-08' value={inputDate} onChange={dateChangeHandler}/>         
             </div>
-            <div className='new-cost__actions'>
+        </div>
+        <div className='new-cost__actions'>
                 <button type='submit'>Добавить Расход</button>  
                 <button type='button' onClick={props.onCancelForm}>Отмена</button>      
-            </div>
         </div>
     </form>
 }
