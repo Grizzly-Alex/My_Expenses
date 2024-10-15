@@ -3,8 +3,6 @@ import './DiagramBar.css';
 function DiagramBar(props) {
     let barFillHeight = '0%';
 
-    console.log(props.maxValue );
-
     if(props.maxValue > 0){
         barFillHeight = Math.round(props.value / props.maxValue * 100) + '%';
     }
@@ -12,9 +10,7 @@ function DiagramBar(props) {
     return(
         <div className='diagram-bar'>
             <div className='diagram-bar__inner'>
-                <div className='diagram-bar__fill' style={{height: barFillHeight}}>
-
-                </div>
+                <div className='diagram-bar__fill' style={{height: barFillHeight}}></div>
             </div>
             <div className='diagram-bar__label'>{props.label}</div>
         </div>
